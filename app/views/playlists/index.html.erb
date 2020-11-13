@@ -1,11 +1,13 @@
-<div class="container text-center">
+<div class="container-fluid text-center">
   <div class="text-right">
-    <%= link_to "Add Playlist", new_playlist_path, method: :get %>
+   <button style="padding: 8px 12px; color: white; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
+      <%= link_to "Add Playlist", new_playlist_path, method: :get, class: "text-white" %>
+    </button>
   </div>
-  <h1>Your Playlists</h1>
-  <div class="row">
+  <h1 style="color:black; padding: 12px;">My Playlists</h1>
+  <div style="background-color: rgba(255, 255, 255, 0.8);" class="row">
     <% @playlists.reverse.each do |playlist| %>
-      <div class="col-lg-4 col-md-6 cold-sm-12">
+      <div style="padding: 8px 0; " class="col-lg-4 col-md-6 cold-sm-12">
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
           <div></div>
           <div>
@@ -24,7 +26,7 @@
     <% end %>
   </div>
 </div>
-<footer style="background-color:black;color:white;" class="container-fluid text-center">
+<footer style="background-color:black;color:white;" class="container-fluid text-right">
   Questions? Please,
   <a href="mailto:simonwaltondev@gmail.com?subject=Easy Streamin Enquiry" target="_blank">
     get in touch

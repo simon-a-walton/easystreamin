@@ -2,7 +2,7 @@
   <%= simple_form_for [@playlist] do |f| %>
   <h5><%= f.input :name %></h5>
   <h6><%= f.input :url %></h6>
-  <%= f.button :submit, class: "btn create-button" %>
+  <%= f.button :submit, class:"bg-success mb-3" %>
   <% end %>
 
 <%= link_to "Back", playlists_path %>
