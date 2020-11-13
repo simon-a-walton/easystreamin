@@ -1,0 +1,32 @@
+<div class="container text-center">
+  <div class="text-right">
+    <%= link_to "Add Playlist", new_playlist_path, method: :get %>
+  </div>
+  <h1>Your Playlists</h1>
+  <div class="row">
+    <% @playlists.reverse.each do |playlist| %>
+      <div class="col-lg-4 col-md-6 cold-sm-12">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+          <div></div>
+          <div>
+            <h3>
+              <%= playlist.name %>
+            </h3>
+          </div>
+          <div>
+            <%= link_to playlist_path(playlist), data: { confirm: "Delete #{playlist.name}?" }, method: :delete do %>
+              <i class="fas fa-trash-alt"></i>
+              <% end %>
+          </div>
+        </div>
+        <%=playlist.url.html_safe%>
+      </div>
+    <% end %>
+  </div>
+</div>
+<footer style="background-color:black;color:white;" class="container-fluid text-center">
+  Questions? Please,
+  <a href="mailto:simonwaltondev@gmail.com?subject=Easy Streamin Enquiry" target="_blank">
+    get in touch
+  </a>
+</footer>
