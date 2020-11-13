@@ -1,34 +1,44 @@
 <div class="container-fluid text-center">
-  <div class="text-right">
-   <button style="padding: 8px 12px; color: white; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
-      <%= link_to "Add Playlist", new_playlist_path, method: :get, class: "text-white" %>
-    </button>
-  </div>
   <h1 style="color:black; padding: 12px;">My Playlists</h1>
-  <div style="background-color: rgba(255, 255, 255, 0.8);" class="row">
-    <% @playlists.reverse.each do |playlist| %>
-      <div style="padding: 8px 0; " class="col-lg-4 col-md-6 cold-sm-12">
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
-          <div></div>
-          <div>
-            <h3>
-              <%= playlist.name %>
-            </h3>
-          </div>
-          <div>
-            <%= link_to playlist_path(playlist), data: { confirm: "Delete #{playlist.name}?" }, method: :delete do %>
-              <i class="fas fa-trash-alt"></i>
+  <% if @playlists.length < 1 %>
+  <div class="container my-5 py-5">
+    <h2>¯\_(ツ)_/¯</h2>
+      <h2>No playlists to show</h2>
+        <ul class="list-unstyled m-5">
+          <li>Click on 'Add Playlist' above</li>
+          <li>Go to your Spotify Desktop and click
+            &nbsp; <code><i class="fas fa-ellipsis-h"></i> (More) </code>
+            <i class="fas fa-arrow-circle-right"></i><code> Share </code>
+            <i class="fas fa-arrow-circle-right"></i><code> Copy Embed Code</code>
+          </li>
+        </ul>
+    </div>
+  <% else %>
+    <div style="background-color: rgba(255, 255, 255, 0.8);" class="row">
+      <% @playlists.reverse.each do |playlist| %>
+        <div style="padding: 8px 0; " class="col-lg-4 col-md-6 cold-sm-12">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+            <div></div>
+            <div>
+              <h3>
+                <%= playlist.name %>
+              </h3>
+            </div>
+            <div>
+              <%= link_to playlist_path(playlist), data: { confirm: "Delete #{playlist.name}?" }, method: :delete do %>
+                <i class="fas fa-trash-alt"></i>
               <% end %>
+            </div>
           </div>
+          <%=playlist.url.html_safe%>
         </div>
-        <%=playlist.url.html_safe%>
-      </div>
-    <% end %>
-  </div>
+        <footer style="background-color:black;color:white; padding: 8px;" class="container-fluid text-right">
+          Questions? Please
+          <a href="mailto:simonwaltondev@gmail.com?subject=Easy Streamin Enquiry" target="_blank">
+            get in touch
+          </a>
+        </footer>
+      <% end %>
+    </div>
+  <% end %>
 </div>
-<footer style="background-color:black;color:white;" class="container-fluid text-right">
-  Questions? Please,
-  <a href="mailto:simonwaltondev@gmail.com?subject=Easy Streamin Enquiry" target="_blank">
-    get in touch
-  </a>
-</footer>

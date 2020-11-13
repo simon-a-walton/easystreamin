@@ -1,24 +1,27 @@
-<div style="background-color: rgba(255, 255, 255, 0.85)" class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon bg-primary">
   <h2>
-    <%= link_to "easy streamin'", root_path %>
+    <%= link_to "easy streamin'", root_path, class: "text-white" %>
   </h2>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+        <li class="nav-item">
+           <button style="padding: 8px 12px; color: white; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
+      <%= link_to "Add Playlist", new_playlist_path, method: :get, class: "text-white" %>
+    </button>
+        </li>
         <li class="nav-item active m-3">
-          <%= link_to "My Playlists", "/playlists" %>
+          <%= link_to "Playlists", "/playlists", class: "text-white" %>
         </li>
         <li class="nav-item m-3">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-white" %>
         </li>
       <% else %>
         <li class="nav-item m-3">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
         </li>
       <% end %>
     </ul>
