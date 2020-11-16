@@ -1,20 +1,50 @@
-<div class="container my-5 py-5">
-  <h1>Easy Streamin'</h1>
-  <p>Play all your favourite Spotify Playlists Online for free!</p>
-  <h2 class="pb-3">How it works</h2>
-  <h4>On Spotify Desktop:</h4>
-  <ul>
-    <li>Make your playlist on your Spotify Free account</li>
-    <li>Click
-      &nbsp; <code><i class="fas fa-ellipsis-h"></i> (More) </code>
-      <i class="fas fa-arrow-circle-right"></i><code> Share </code>
-      <i class="fas fa-arrow-circle-right"></i><code> Copy Embed Code</code>
-    </li>
-  </ul>
-  <h4>On easy streamin':</h4>
-  <ul>
-    <li>Click on 'Add Playlist'</li>
-    <li>Choose a name for your playlist and copy in the code from Spotify</li>
-    <li>Done!</li>
-  </ul>
+<div>
+  <div class="bg-linear text-white">
+    <div class="text-center py-5">
+      <h2>Play all your favourite Spotify Playlists Online for free!</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 border-right pb-4">
+        <div class="text-center py-5">
+          <%= image_tag("spotifylaptop.png", :alt => "Spotify on Desktop", width: "200px")%>
+        </div>
+        <div class="container">
+          <h4 class="p-4">
+            <span class="border-bottom">On Spotify Desktop</span>*:
+          </h4>
+          <ul class="py-3 play-list">
+            <li>Make your playlist on your Spotify Free account</li>
+            <li>Click
+              &nbsp; <code><i class="fas fa-ellipsis-h"></i> (More) </code>
+              <i class="fas fa-arrow-circle-right"></i><code> Share </code>
+              <i class="fas fa-arrow-circle-right"></i><code> Copy Embed Code</code>
+            </li>
+          </ul>
+          <p class="p-3" style="font-size: 0.6em;">
+            <em>*Please note that sadly the Spotify App on your Mobile, Tablet or Chromebook device will not support these features</em>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 border-left pb-4">
+        <div class="text-center py-5">
+          <%= image_tag("eslaptop.png", :alt => "Spotify on Desktop", width: "200px") %>
+        </div>
+        <div class="container">
+          <h4 class="p-4">
+            <span class="border-bottom">On easy streamin</span>':
+          </h4>
+          <ul class="py-3 play-list">
+            <li>Create a free account</li>
+            <li style="line-height: 2em">Click on
+              <span style="padding: 4px 8px; color: white; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
+                Add Playlist
+              </span>
+            </li>
+            <li>Choose a name for your playlist and copy in the code from Spotify</li>
+            <li>🎉 Et Voila!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
