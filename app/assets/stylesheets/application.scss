@@ -16,3 +16,15 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+
+.bg-linear {
+  background: linear-gradient( $blue, $purple);
+}
+
+code {
+  color: $green;
+}
+
+.play-list {
+  list-style-image: url("play-solid.svg");
+}
