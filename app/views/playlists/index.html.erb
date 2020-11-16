@@ -1,5 +1,5 @@
-<div class="container-fluid text-center">
-  <h1 style="color:black; padding: 12px;">My Playlists</h1>
+<div class="bg-linear text-center text-white">
+  <h1 style="padding: 12px;">My Playlists</h1>
   <% if @playlists.length < 1 %>
     <div class="container my-5 py-5">
       <h2>¯\_(ツ)_/¯</h2>
@@ -14,7 +14,7 @@
       </ul>
     </div>
   <% else %>
-    <div style="background-color: rgba(255, 255, 255, 0.8);" class="row">
+    <div class="row">
       <% @playlists.reverse.each do |playlist| %>
         <div style="padding: 8px 0; " class="col-lg-4 col-md-6 cold-sm-12">
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
