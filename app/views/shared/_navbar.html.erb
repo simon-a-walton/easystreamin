@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="font-weight: 600;">
-  <h2>
+  <h2 style="font-size: 1.7em">
     <%= link_to root_path, class: "text-warning" do%>
       <div class="text-center">
-        <%= image_tag("eslaptop.png", :alt => "Spotify on Desktop", width: "40px") %>
+        <%= image_tag("eslaptop.png", :alt => "Spotify on Desktop", width: "30px") %>
         easy streamin'
         </div>
     <% end %>
@@ -15,7 +15,7 @@
       <% if user_signed_in? %>
         <li class="nav-item">
           <button style="padding: 8px 12px; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
-            <%= link_to "Add Playlist", new_playlist_path, method: :get, class: "text-white" %>
+            <%= link_to "Add Playlist", new_playlist_path, method: :get, style: "color: black" %>
           </button>
         </li>
         <li class="nav-item active m-3">
