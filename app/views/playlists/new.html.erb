@@ -1,9 +1,10 @@
-<div class="container pt-2 text-warning font-weight-bolder">
+<div class="pt-4 text-white font-weight-bolder bg-danger" style="height: 90vh;">
+  <div class="container">
   <%= simple_form_for [@playlist] do |f| %>
   <%= f.input :name, placeholder: "Name your playlist" %>
   <%= f.input :url, placeholder: "Paste here output from 'Copy Embed Code'. Eg. <iframe>..." %>
   <%= f.button :submit, class:"bg-success mb-3" %>
   <% end %>
-
-<%= link_to "Back", playlists_path %>
+  <%= link_to "Back", playlists_path %>
+  </div>
 </div>
