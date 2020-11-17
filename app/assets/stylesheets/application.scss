@@ -28,3 +28,19 @@ code {
 .play-list {
   list-style-image: url("play-solid.svg");
 }
+
+.popup {
+  position: absolute;
+  top: 8;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  margin-top: 90px;
+  visibility:hidden;
+}
+
+.bg-popup {
+  position: relative;
+  opacity: 0.3;
+}
