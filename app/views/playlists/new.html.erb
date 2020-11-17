@@ -1,7 +1,7 @@
-<div class="container pt-2">
+<div class="container pt-2 text-warning font-weight-bolder">
   <%= simple_form_for [@playlist] do |f| %>
-  <h5><%= f.input :name, placeholder: "Name your playlist" %></h5>
-  <h5><%= f.input :url, placeholder: "Copy here the code. Eg. <iframe>..." %></h5>
+  <%= f.input :name, placeholder: "Name your playlist" %>
+  <%= f.input :url, placeholder: "Paste here output from 'Copy Embed Code'. Eg. <iframe>..." %>
   <%= f.button :submit, class:"bg-success mb-3" %>
   <% end %>
 
