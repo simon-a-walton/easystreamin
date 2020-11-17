@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="font-weight: 600;">
   <h2 style="font-size: 1.7em">
-    <%= link_to root_path, class: "text-warning" do%>
+    <%= link_to root_path, class: "text-danger" do%>
       <div class="text-center">
         <%= image_tag("eslaptop.png", :alt => "Spotify on Desktop", width: "30px") %>
         easy streamin'
@@ -13,20 +13,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <button style="padding: 8px 12px; border: 2px solid white; border-radius: 4px; margin: 8px;" class="bg-success">
-            <%= link_to "Add Playlist", new_playlist_path, method: :get, style: "color: black" %>
-          </button>
+        <li class="nav-item mr-3 my-3">
+          <%= link_to "Add Playlist", new_playlist_path, method: :get, class: "bg-success", style: "color: black; padding: 8px 12px; border: 2px solid white; border-radius: 4px;" %>
         </li>
         <li class="nav-item active m-3">
-          <%= link_to "Playlists", "/playlists", class: "text-warning" %>
+          <%= link_to "Playlists", "/playlists", class: "text-danger" %>
         </li>
         <li class="nav-item m-3">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-warning" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-danger" %>
         </li>
       <% else %>
         <li class="nav-item m-3">
-          <%= link_to "Login", new_user_session_path, class: "nav-link text-warning" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link text-danger" %>
         </li>
       <% end %>
     </ul>
