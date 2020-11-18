@@ -10,6 +10,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <meta name="description" content="Play all your favourite Spotify Playlists Online for free!">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="Easy Streamin'" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="eslaptop.png" />
+    <meta property="og:description" content="Play all your favourite Spotify Playlists Online for free!" />
+    <meta property="og:site_name" content="Easy Streamin'" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="Easy Streamin'">
+    <meta name="twitter:title" content="Easy Streamin'">
+    <meta name="twitter:description" content="Play all your favourite Spotify Playlists Online for free!">
+    <meta name="twitter:image:src" content="eslaptop.png">
   </head>
 
   <body style="background-color: white;" >
